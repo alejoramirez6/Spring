@@ -1,0 +1,16 @@
+Realización de builds de aplicaciones REST con Spring:
+
+    Artefacto: En el contexto de Maven o Gradle, un artefacto es el resultado de la compilación de
+    un proyecto. Puede ser un archivo JAR, WAR, o cualquier otro tipo de archivo que contenga el código
+    compilado y las dependencias necesarias para ejecutar la aplicación.
+
+    Creando múltiples perfiles por entorno: En Spring, puedes tener diferentes perfiles de configuración
+    para cada entorno (desarrollo, pruebas, producción, etc.). Esto te permite configurar tu aplicación de
+    forma diferente según el entorno en el que se esté ejecutando. Para crear perfiles por entorno, puedes
+    utilizar archivos de configuración application-{perfil}.properties o application-{perfil}.yml,
+    donde {perfil} es el nombre del perfil (por ejemplo, dev, prod, test, etc.).
+
+    Cargar variables de entorno en application.properties: En Spring, puedes cargar variables de entorno en
+    tu archivo application.properties utilizando la sintaxis ${env.VARIABLE}. Por ejemplo, si tienes una variable
+    de entorno llamada DATABASE_URL, puedes utilizarla en tu application.properties de la siguiente
+    manera: spring.datasource.url=${env.DATABASE_URL}.

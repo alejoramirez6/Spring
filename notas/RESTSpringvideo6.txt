@@ -1,0 +1,40 @@
+• Microservicios: Son una arquitectura de software que estructura una aplicación como una colección de servicios pequeños e independientes, cada uno implementando una funcionalidad específica. Los microservicios se comunican entre sí a través de protocolos ligeros como HTTP.
+
+• Controladores: En el contexto de Spring y REST, los controladores son clases que gestionan las peticiones HTTP entrantes. Utilizan anotaciones como @RestController para indicar que son controladores RESTful y definen métodos que responden a diferentes rutas y verbos HTTP.
+
+• JSON: Es un formato ligero de intercambio de datos que se utiliza comúnmente en aplicaciones web y servicios RESTful. JSON representa datos en forma de objetos y arrays, y es fácilmente legible tanto para humanos como para máquinas.
+
+• Patrón Modelo Vista Controlador (MVC): Es un patrón de diseño de software que separa la lógica de negocio (modelo), la presentación (vista) y la gestión de las peticiones (controlador) en una aplicación. En el contexto de Spring, los controladores actúan como la capa de controlador en un patrón MVC.
+
+• Bootstrap: Es un framework de front-end que proporciona herramientas y estilos CSS predefinidos para el desarrollo rápido de interfaces de usuario. Se utiliza comúnmente en aplicaciones web para mejorar el diseño y la usabilidad.
+
+• REST (Representational State Transfer): Es un estilo de arquitectura para sistemas distribuidos, donde los recursos se representan como URIs (Uniform Resource Identifiers) y se pueden acceder y manipular a través de operaciones estándar HTTP como GET, POST, PUT y DELETE. REST se basa en principios como la interoperabilidad, la escalabilidad y la simplicidad.
+
+
+
+// VIDEO 7 OBTENIENDO VALORES DE PETICIONES:
+
+
+	1. @PathVariable: Esta anotación se utiliza para mapear variables de la URL
+	a parámetros de método en tu controlador. Por ejemplo, @GetMapping("/users/{id}")
+	mapearía la variable {id} a un parámetro id en tu método.
+	2. Request y Response Entity: Estos son objetos que representan la solicitud y la
+	respuesta HTTP, respectivamente. Puedes utilizarlos para acceder a los datos enviados
+	en la solicitud y para construir la respuesta que enviarás al cliente.
+	3. @PostMapping: Esta anotación se utiliza para mapear métodos de controlador a
+	solicitudes HTTP POST. Por ejemplo, @PostMapping("/users") mapearía una solicitud
+	POST a la URL "/users" a un método en tu controlador.
+	4. Diferencia entre Spring y Spring Boot: Spring es un framework de desarrollo de
+	aplicaciones Java que proporciona soporte para el desarrollo de aplicaciones empresariales.
+	Spring Boot, por otro lado, es una extensión de Spring que simplifica la configuración
+	y el despliegue de aplicaciones Spring al proporcionar configuraciones predeterminadas
+	y autoconfiguración.
+	5. Bootstrap: Aunque no está directamente relacionado con Spring, Bootstrap es un
+	framework de front-end que facilita el diseño de interfaces de usuario atractivas y
+	responsivas. Puede integrarse con aplicaciones Spring para mejorar la apariencia de
+	las páginas web generadas por la aplicación.
+	6. REST (Representational State Transfer): Es un estilo de arquitectura de software
+	que define un conjunto de restricciones para el diseño de servicios web. Se basa en
+	el concepto de recursos y utiliza operaciones HTTP estándar (GET, POST, PUT, DELETE)
+	para interactuar con estos recursos.
+
