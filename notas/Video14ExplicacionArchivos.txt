@@ -1,0 +1,22 @@
+    Configuración de seguridad (WebSecurityConfig): En este archivo, se configura la seguridad de
+    la aplicación utilizando Spring Security. Se establecen reglas de acceso y configuraciones de
+    autenticación.
+
+    Entidades (User, Book): Estas clases representan las entidades principales de la aplicación que
+    se van a almacenar en la base de datos. Tienen anotaciones de JPA para mapearlas a tablas de base
+    de datos.
+
+    Repositorios (UserRepository, BookRepository): Estas interfaces extienden JpaRepository de Spring
+    Data JPA, lo que proporciona métodos para realizar operaciones CRUD en las entidades. Se utilizan
+    para interactuar con la base de datos.
+
+    Servicios (CustomUserDetailsService): En estos archivos se definen servicios que encapsulan la
+    lógica de negocio. Por ejemplo, CustomUserDetailsService implementa UserDetailsService de Spring
+    Security y se utiliza para cargar usuarios desde la base de datos durante la autenticación.
+
+    Clase principal (ObRestDatajpaApplication): Esta clase contiene el método main y se encarga de
+    iniciar la aplicación Spring Boot. También se utiliza para realizar operaciones de prueba como crear,
+    almacenar, recuperar, modificar y eliminar usuarios y libros en la base de datos.
+
+    Configuración adicional (HttpFirewall, PasswordEncoder): Se realizan configuraciones adicionales como
+    la configuración del firewall HTTP y la configuración del codificador de contraseñas (BCryptPasswordEncoder).

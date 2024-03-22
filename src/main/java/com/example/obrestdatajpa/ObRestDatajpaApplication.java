@@ -1,7 +1,9 @@
 package com.example.obrestdatajpa;
 
 import com.example.obrestdatajpa.entities.Book;
+import com.example.obrestdatajpa.entities.User;
 import com.example.obrestdatajpa.repository.BookRepository;
+import com.example.obrestdatajpa.repository.UserRepository;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
@@ -9,6 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDate;
 
@@ -18,7 +21,18 @@ public class ObRestDatajpaApplication {
 	public static void main(String[] args) {
 
 		ApplicationContext context = SpringApplication.run(ObRestDatajpaApplication.class, args);
+		UserRepository userRepository = context.getBean(UserRepository.class);
+		PasswordEncoder encoder = context.getBean(PasswordEncoder.class);
 		BookRepository repository = context.getBean(BookRepository.class);
+
+		User user = new User(null,
+				"usuario",
+				encoder.encode("contraseña"),
+				"USER");
+		userRepository.save(user);
+
+		User user2 = new User(null, "marco", encoder.encode("admin"), "USER");
+		userRepository.save(user2);
 
 		//CRUD
 
@@ -60,28 +74,11 @@ public class ObRestDatajpaApplication {
 		//repository.deleteById(1L);
 
         //RECUPERAR TODOS LOS LIBROS ALMACENADOS
-        System.out.println("La cantida de libros almacenados actualmente en el repo son: " + repository.findAll().size());
+        System.out.println("La cantidad de libros almacenados actualmente en el repo son: " + repository.findAll().size());
 
 
 
 		}
-		@Bean
-		public OpenAPI customOpenApi(){
-			return new OpenAPI()
-					.info(new Info()
-							.title("API REST de libros")
-                            .description("API REST de libros")
-                            .version("1.0")
-							.contact(new io.swagger.v3.oas.models.info.Contact()
-									.email("<EMAIL>"))
-							.termsOfService("http://swagger.io/terms/")
-							.license(new License().name("Apache 2.0").url("http://sprongdoc.org")));
-        }
-
-
-
-
-
 
 
 	}

@@ -12,5 +12,5 @@ Realización de builds de aplicaciones REST con Spring:
 
     Cargar variables de entorno en application.properties: En Spring, puedes cargar variables de entorno en
     tu archivo application.properties utilizando la sintaxis ${env.VARIABLE}. Por ejemplo, si tienes una variable
-    de entorno llamada DATABASE_URL, puedes utilizarla en tu application.properties de la siguiente
+    de entorno llamada DATABASE_URL, puedes usarla en tu application.properties de la siguiente
     manera: spring.datasource.url=${env.DATABASE_URL}.
